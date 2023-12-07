@@ -66,12 +66,39 @@ nisl sagittis aliquet. Nunc quis nisl quis nisl sagittis aliquet.
 ### Marines: (Numer List)
 
 1.  M**onkey D Garp**
-
 2.  **Sengoku**
 
 3.  Akainu
-
 4.  Aokiji
+
+
+```
+Ts = 1/50;
+t = 0:Ts:10-Ts;
+x = sin(2*pi*15*t) + sin(2*pi*20*t);
+plot(t,x)
+xlabel('Time (seconds)')
+ylabel('Amplitude')
+
+plot(f,abs(y))
+xlabel('Frequency (Hz)')
+ylabel('Magnitude')
+title('Magnitude')
+```
+
+```
+m = length(whaleMoan);
+n = pow2(nextpow2(m));
+y = fft(whaleMoan,n);
+```
+
+```
+f = (0:n-1)*(fs/n)/10; % frequency vector
+power = abs(y).^2/n;   % power spectrum
+plot(f(1:floor(n/2)),power(1:floor(n/2)))
+xlabel('Frequency (Hz)')
+ylabel('Power')
+```
 
 ## 1.4 Some more random text:
 

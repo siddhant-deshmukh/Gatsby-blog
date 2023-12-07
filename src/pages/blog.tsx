@@ -22,11 +22,14 @@ function BlogsPage({ data }: {
 }) {
   return (
     <Layout pageTitle='Blogs'>
-      <div className='my-10 max-w-3xl text-white'>
-        <h1 className='text-5xl font-bold'>Blogs</h1>
-        <p className='text-lg mt-3'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora officiis, sint nemo neque minima laudantium nam, ratione rem, aut ipsa tempore.
-        </p>
+      <div className='h-[50vh] fixed top-0 left-0 w-full -z-10 dark-gradient-bg'></div>
+      <div className='w-full py-20'>
+        <div className='mx-auto max-w-3xl text-white'>
+          <h1 className='text-5xl font-bold'>Blogs</h1>
+          <p className='text-lg mt-3'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora officiis, sint nemo neque minima laudantium nam, ratione rem, aut ipsa tempore.
+          </p>
+        </div>
       </div>
       <div className='flex flex-col items-center w-full mx-auto'>
         {/* <span>{JSON.stringify(data)}</span> */}
@@ -40,24 +43,24 @@ function BlogsPage({ data }: {
                   <div className="object-cover flex-shrink-0 w-[250px] max-h-64 overflow-hidden">
                     {/* <img  src="/docs/images/blog/image-4.jpg" alt="" /> */}
                     {
-                      featuredImg && 
+                      featuredImg &&
                       <GatsbyImage alt={blog.name + "-featured-image"} image={featuredImg} />
                     }
                   </div>
                   <div className="flex flex-col w-full justify-between p-4 overflow-hidden leading-normal max-h-64">
                     <h5 className="mb-2 text-2xl text-left font-bold tracking-tight text-gray-900 dark:text-white">
-                      {blog.name.slice(0,70)}
+                      {blog.name.slice(0, 70)}
                     </h5>
                     <div className='ml-auto text-sm'>
                       <time>{blog.datePublished}</time>
                     </div>
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                      {blog.description?.slice(0,200)}
+                      {blog.description?.slice(0, 200)}
                     </p>
                     <div className="flex flex-wrap">
                       {
-                        blog.tags?.slice(0,5).map((tag)=> {
-                          return <span className='mb-2 mr-2 px-4 py-2 border shadow-md text-xs rounded-full font-semibold text-white bg-gray-700'>{tag.slice(0,10)}</span>
+                        blog.tags?.slice(0, 5).map((tag) => {
+                          return <span className='mb-2 mr-2 px-4 py-2 border shadow-md text-xs rounded-full font-semibold text-white bg-gray-700'>{tag.slice(0, 10)}</span>
                         })
                       }
                     </div>

@@ -13,22 +13,22 @@ const Layout = ({ pageTitle, children }: { pageTitle: string, children: React.Re
   `)
   return (
     <div className='relative'>
-      <div className='h-[50vh] fixed top-0 left-0 w-full -z-10 dark-gradient-bg'></div>
+      {/* <div className='h-[50vh] fixed top-0 left-0 w-full -z-10 dark-gradient-bg'></div> */}
       {/* <div className='absolute w-screen h-screen -z-10 top-0 left-0'>
         <div className='h-[70%] dark-gradient-bg'></div>
         <div className='h-[30%] bg-slate-100'></div>
       </div> */}
       {/* <header>{data.site.siteMetadata.title}</header> */}
-      <nav className='flex space-x-10 px-10 py-5 text-white justify-end text-lg font-semibold'>
+      <nav className='flex top-0 z-50 border shadow-md bg-white sticky space-x-10 px-10 py-5 justify-end text-lg font-semibold'>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/blog">Blog</Link>
       </nav>
-      <main className='flex justify-center'>
-        <div className='w-auto'>
+      <div className='flex justify-center'>
+        <div className='w-screen'>
           {children}
         </div>
-      </main>
+      </div>
       {/* <Footer /> */}
     </div>
   )

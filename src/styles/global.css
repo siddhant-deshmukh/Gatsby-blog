@@ -95,4 +95,8 @@ ol > li:first-child::before{
   .the-blog figcaption{
     @apply text-gray-800 font-light my-1
   }
+
+  .the-blog pre {
+    @apply p-3 rounded-lg my-5 bg-[#f6f6f6] border border-[#dfdfdf] text-xs leading-5
+  }
 }
