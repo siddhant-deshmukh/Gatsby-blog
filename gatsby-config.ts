@@ -10,16 +10,38 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    "gatsby-plugin-mdx",
-    "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+              // wrapperStyle: `display:inline`,
+            },
+          },
+        ],
+      },
+    },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     "name": "pages",
+    //     "path": "./src/pages/"
+    //   },
+    //   __key: "pages"
+    // },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "pages",
-        "path": "./src/pages/"
+        "path": `${__dirname}/blogs`
       },
-      __key: "pages"
     },
     'gatsby-plugin-postcss',
   ]

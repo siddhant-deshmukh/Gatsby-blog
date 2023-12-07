@@ -1,3 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dark-gradient-bg {
+  /* background: linear-gradient(120deg, rgba(0, 23, 31) 30%, rgb(2, 63, 106) 70%); */
+  background: linear-gradient(120deg, rgb(2, 63, 106) 0%,  rgba(0, 23, 31) 40%);
+  /* background: linear-gradient(150deg, rgb(2, 63, 106) 0%,  rgba(0, 23, 31) 40%); */
+
+}
+
+.layout-main > .absolute {
+  scrollbar-gutter: stable right;
+}
+
+li:is(h1, h2, h3, h4, h5, h6){
+  display: inline-block;
+}
+img {
+  display: inline-block;
+}
+/* ul > li:first-child::before{
+  content: " \2022 \00A0";
+  padding-right: 3px;
+}
+ol > li:first-child::before{
+  content: counter(listCounter) ". ";
+  padding-right: 3px;
+} */
+/* ul > li:only-of-type::before{
+  content: " \2022 \00A0";
+  padding-right: 3px;
+} */
+
+@layer base {
+  .the-blog h1 {
+    @apply text-4xl font-semibold pb-5 inline-block
+  }
+  .the-blog h2 {
+    @apply text-2xl font-semibold py-3 inline-block
+  }
+  .the-blog h3 {
+    @apply text-xl font-semibold py-2 inline-block
+  }
+  .the-blog h4 {
+    @apply text-lg font-semibold py-2 inline-block
+  }
+  .the-blog h5 {
+    @apply text-lg font-semibold py-1.5 inline-block
+  }
+  .the-blog h6 {
+    @apply text-lg font-medium py-1 inline-block
+  }
+  
+  .the-blog p{
+    @apply text-base py-1.5 pl-4 inline-block
+  }
+  .the-blog ul > li{
+    @apply text-base my-[0.5px] 
+  }
+  
+  .the-blog ol > li{
+    /* counter-increment: listCounter; */
+    @apply text-base my-[0.5px] 
+  } 
+  .the-blog ul{
+    list-style-position: inside;
+    @apply text-base my-0.5 ml-4 list-disc
+  }
+  .the-blog ol{
+    /* counter-reset: listCounter; */
+    list-style-position: inside;
+    @apply text-base my-0.5 ml-4 list-decimal
+  }
+  /* .the-blog ul > ul, .the-blog ul > ol{
+    @apply my-0.5 ml-8 list-disc
+  }
+  .the-blog ol > ul, .the-blog ol > ol{
+    @apply my-0.5 ml-8
+  } */
+  .the-blog blockquote{
+    @apply border-l-[10px] border-l-gray-300 pl-3 py-2 ml-7 mb-2 text-lg font-medium hover:border-l-gray-400
+  }
+}
