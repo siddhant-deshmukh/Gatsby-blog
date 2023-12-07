@@ -4,6 +4,7 @@ description: "This blog will explain what are the markdown files and how to use 
 datePublished: "Nov 34, 2018"
 slug: "what-is-markdown"
 featuredImage: "../imgs/ele-04-sq.jpg"
+tags: ["consectetur", "adipisicing", "elit.", "Dolores", "doloremque"]
 ---
 
 # What are .MD files or what is Markdown?

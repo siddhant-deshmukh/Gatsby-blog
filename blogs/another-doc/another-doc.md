@@ -5,6 +5,7 @@ author: "Siddhant Deshmukh"
 datePublished: "Nov -234, 2018"
 slug: "another-doc"
 featuredImage: "./ele-02.jpg"
+tags: ["consectetur", "adipisicing", "elit.", "Dolores", "doloremque", "aiores", "quidem", "beatae", "autem"]
 ---
 
 # Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem harum doloremque nemo praesentium impedit fugiat quas facere, inventore sed consectetur earum soluta animi! Commodi eveniet et perspiciatis accusantium eligendi perferendis numquam aspernatur nostrum reiciendis!

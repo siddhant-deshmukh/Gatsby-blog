@@ -5,6 +5,7 @@ author: "Siddhant Deshmukh"
 datePublished: "Nov 34, 2018"
 slug: "how-to-write-doc"
 featuredImage: "../imgs/ele-01.jpg"
+tags: ["consectetur", "adipisicing", "elit.", "Dolores", "doloremque"]
 ---
 
 # 1. About how to write a docx. 
@@ -76,7 +77,7 @@ nisl sagittis aliquet. Nunc quis nisl quis nisl sagittis aliquet.
 
 ### First Paragraph 
 
-![image](./image1.jpeg)
+![image of an panda, Very cute panda](./image1.jpeg)
 
 Sed id nisl quis nisl sagittis aliquet. Nunc quis nisl quis nisl
 sagittis aliquet. Sed id nisl quis nisl sagittis aliquet. Nunc quis nisl
@@ -112,6 +113,6 @@ quis nisl sagittis aliquet. Nunc quis nisl quis nisl sagittis alique*t.
 
 # With some images
 
-![image](./image2.jpeg)
+![image of an cat Very cute cat](./image2.jpeg)
 
 2 different image of cats

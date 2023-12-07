@@ -17,13 +17,15 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        extensions: [`.mdx`, `.md`],
+        extensions: ['.md', '.mdx'],
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
-              // wrapperStyle: `display:inline`,
+              maxWidth: 800,
+              showCaptions: true,
+              //@ts-ignore
+              wrapperStyle: fluidResult => ` height: 500px; max-height : 500px; 	object-fit: contain; max-width:${Math.round(fluidResult.aspectRatio*500)}px; };`
             },
           },
         ],
@@ -40,7 +42,13 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "path": `${__dirname}/blogs`
+        "path": `${__dirname}/blogs/`
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "path": `${__dirname}/src/pages/`
       },
     },
     'gatsby-plugin-postcss',

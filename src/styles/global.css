@@ -19,6 +19,17 @@ li:is(h1, h2, h3, h4, h5, h6){
 img {
   display: inline-block;
 }
+
+figure{
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+figcaption {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 /* ul > li:first-child::before{
   content: " \2022 \00A0";
   padding-right: 3px;
@@ -80,5 +91,8 @@ ol > li:first-child::before{
   } */
   .the-blog blockquote{
     @apply border-l-[10px] border-l-gray-300 pl-3 py-2 ml-7 mb-2 text-lg font-medium hover:border-l-gray-400
+  }
+  .the-blog figcaption{
+    @apply text-gray-800 font-light my-1
   }
 }
