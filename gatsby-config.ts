@@ -25,9 +25,32 @@ const config: GatsbyConfig = {
               maxWidth: 800,
               showCaptions: true,
               //@ts-ignore
-              wrapperStyle: fluidResult => ` height: 500px; max-height : 500px; 	object-fit: contain; max-width:${Math.round(fluidResult.aspectRatio*500)}px; };`
+              wrapperStyle: fluidResult => `max-height : 500px; width: 100%; height: 100%;	object-fit: none; object-position: center; max-width:${Math.round(fluidResult.aspectRatio * 500)}px; };`,
+              srcSetBreakpoints: [  ]
             },
           },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              languageExtensions: [
+                
+              ],
+              // Customize the prompt used in shell output
+              // Values below are default
+              prompt: {
+                user: "root",
+                host: "localhost",
+                global: false,
+              },
+              // By default the HTML entities <>&'" are escaped.
+              // Add additional HTML escapes by providing a mapping
+              // of HTML entities and their escape value IE: { '}': '&#123;' }
+              escapeEntities: {},
+            }
+          }
         ],
       },
     },

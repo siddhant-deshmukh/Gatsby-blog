@@ -1,10 +1,10 @@
 ---
-name: "What are .MD files or markdown"
-description: "This blog will explain what are the markdown files and how to use them in writing blog"
+name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deleniti soluta earum harum vel aliquid architecto vero et omnis fugiat."
+description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, aut nobis distinctio cumque fugiat accusamus, est aliquam impedit, tenetur deleniti magni excepturi nesciunt perspiciatis labore delectus blanditiis. Hic, voluptatem quod? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, quam a. Fugit atque fuga, consequatur repellendus id alias sunt voluptatum."
 datePublished: "Nov 34, 2018"
 slug: "what-is-markdown"
 featuredImage: "../imgs/ele-04-sq.jpg"
-tags: ["consectetur", "adipisicing", "elit.", "Dolores", "doloremque"]
+tags: ["consectetur", "adipisicing", "elit.", "Dolores", "doloremque","consectetur", "adipisicing", "elit.", "Dolores", "doloremque"]
 ---
 
 # What are .MD files or what is Markdown?
