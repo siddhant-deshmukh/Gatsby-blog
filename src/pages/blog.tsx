@@ -25,7 +25,6 @@ function BlogsPage({ data }: {
 }) {
   return (
     <Layout pageTitle='Blogs'>
-      <div className='h-[50vh] fixed top-0 left-0 w-full -z-10 dark-gradient-bg'></div>
       <div className='w-full py-20 px-2'>
         <div className='mx-auto max-w-[1040px] text-white'>
           {/* Title of the blogs page */}
@@ -40,9 +39,9 @@ function BlogsPage({ data }: {
         {/* <span>{JSON.stringify(data)}</span> */}
         <ul className='grid grid-cols-1 lg:grid-cols-2 grid-flow-cols gap-x-7 gap-y-2'>
           {
-            data?.allMdx?.nodes?.map(({ frontmatter: blog }) => {
+            data?.allMdx?.nodes?.map(({ id, frontmatter: blog }) => {
               let featuredImg = getImage(blog.featuredImage?.childImageSharp?.gatsbyImageData as ImageDataLike | null)
-              return <BlogCardSquare blog={blog} featuredImg={featuredImg} />
+              return <BlogCardSquare key={id} blog={blog} featuredImg={featuredImg} />
             })
           }
         </ul>

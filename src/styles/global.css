@@ -16,10 +16,11 @@
 li:is(h1, h2, h3, h4, h5, h6){
   display: inline-block;
 }
+
+/* *Images shown by */
 img {
   display: inline-block;
 }
-
 figure{
   margin-bottom: 40px;
   margin-left: auto;
@@ -32,6 +33,8 @@ figcaption {
   font-style: italic;
 }
 
+
+/* * This will overwrite the prism css even if deleted will be no problem */
 .gatsby-highlight pre[class*="language-"], .gatsby-highlight code[class*="language-"], .gatsby-highlight span[class*="token "] {
   background: #00171f;
   /* border-color: #dfdfdf; */
@@ -42,33 +45,10 @@ figcaption {
   padding: 20px;
 }
 
-/* .gatsby-highlight pre[class*="language-"]::selection, pre[class*="language-"] ::selection{
-  background: rgb(229 231 235);
-}
-.gatsby-highlight code[class*="language-"]::selection, code[class*="language-"] ::selection{
-  background: rgb(229 231 235);
-}
-.gatsby-highlight span[class*="token "]::selection, span[class*="token "] ::selection{
-  background: rgb(229 231 235);
-} */
-
-
-/* ul > li:first-child::before{
-  content: " \2022 \00A0";
-  padding-right: 3px;
-}
-ol > li:first-child::before{
-  content: counter(listCounter) ". ";
-  padding-right: 3px;
-} */
-/* ul > li:only-of-type::before{
-  content: " \2022 \00A0";
-  padding-right: 3px;
-} */
 
 @layer base {
   .the-blog h1[class*="blog-title"] {
-    @apply  text-3xl leading-9 sm:text-[40px] sm:leading-[50px] lg:text-5xl lg:leading-none font-extrabold inline-block py-2
+    @apply  text-3xl leading-9 sm:text-[40px] sm:leading-[50px] lg:text-5xl lg:leading-[60px] font-extrabold inline-block py-2
   }
   .the-blog h1 {
     @apply  text-2xl lg:text-3xl font-extrabold py-5 inline-block
@@ -90,7 +70,7 @@ ol > li:first-child::before{
   }
   
   .the-blog p{
-    @apply  text-base lg:text-lg py-2.5 pl-0 sm:pl-2 inline-block
+    @apply text-primary-5 text-base lg:text-lg py-2.5 pl-0 sm:pl-2 inline-block
   }
   .the-blog ul > li{
     @apply text-base my-[0.5px] 
@@ -116,10 +96,10 @@ ol > li:first-child::before{
     @apply my-0.5 ml-8
   } */
   .the-blog blockquote{
-    @apply border-l-4 md:border-l-[10px] border-gray-300 pl-2 sm:pl-4 py-2 ml-0 sm:ml-2 bg-slate-100 mb-2 text-lg font-medium hover:border-l-gray-400
+    @apply border-l-4 md:border-l-[10px] border-light-4 pl-2 sm:pl-4 py-2 ml-0 sm:ml-2 bg-light-2 mb-2 text-lg font-medium hover:border-l-light-5
   }
   .the-blog figcaption{
-    @apply text-gray-800 text-xs sm:text-sm lg:text-base  my-1
+    @apply text-primary-3 text-xs sm:text-sm lg:text-base  my-1
   }
   .the-blog a {
     @apply underline text-[#3B49DF] hover:text-blue-800
@@ -128,9 +108,10 @@ ol > li:first-child::before{
     @apply p-3 rounded-lg my-5 bg-[#f6f6f6] border border-[#dfdfdf] text-xs leading-5
   } */
   .the-blog span code[class="language-text"]{
-    @apply text-[#00171f] bg-gray-200 mx-2 
+    @apply text-secondary-d bg-light-3 mx-2 
   }
 
+  /* * Overwriting prims css */
   .gatsby-highlight pre[class*="language-"], .gatsby-highlight code[class*="language-"], .gatsby-highlight span[class*="token "] {
     @apply text-base lg:text-lg
   }

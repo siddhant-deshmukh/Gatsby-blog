@@ -5,7 +5,8 @@ import Footer from './Footer'
 const Layout = ({ children }: { pageTitle: string, children: React.ReactNode }) => {
   return (
     <div className='relative'>
-      <nav className='flex items-center top-0 z-50 border shadow-md bg-white sticky space-x-10 px-5 py-3 sm:px-10 sm:py-5 justify-end text-base lg:text-lg font-semibold'>
+      <div className='h-[50vh] fixed top-0 left-0 w-full min-h-[300px] -z-10 dark-gradient-bg'></div>
+      <nav className='flex items-center top-0 z-50 border shadow-md bg-main text-secondary-d sticky space-x-10 px-5 py-3 sm:px-10 sm:py-5 justify-end text-base lg:text-lg font-semibold'>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/blog">Blog</Link>

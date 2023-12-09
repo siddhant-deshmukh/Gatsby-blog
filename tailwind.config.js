@@ -5,7 +5,31 @@ module.exports = {
     "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "main": "#FFFFFF",
+
+
+        "primary": "#000000",
+        "primary-2": "rgb(107 114 128)",
+        "primary-3": "rgb(75 85 99)",
+        "primary-4": "rgb(55 65 81)",
+        "primary-5": "rgb(31 41 55)",
+        "primary-6": "rgb(17 24 39)",
+
+        "secondary-d": "rgba(0, 23, 31)",
+        "secondary-l": "rgb(2, 63, 106)",
+        "secondary-d-2": "#01263c",
+
+        "light-1": "",
+        "light-2": "rgb(241 245 249)", //slate-100
+        "light-3": "rgb(229 231 235)", //gray-200
+        "light-4": "rgb(209 213 219)", // gray-300 
+        "light-5": "rgb(156 163 175)", // gray-500
+
+
+      }
+    },
   },
   plugins: [],
 }
