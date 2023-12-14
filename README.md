@@ -7,16 +7,16 @@
 ## Images
 
 * Home Page Full
-![Home Page Full](./images/README/home-page-full.png)
+* ![Home Page Full](./images/README/home-page-full.png)
 
 * Blog Page Header Frontmatter section
-![Blog Page Header Frontmatter section](./images/README/blog-page.png)
+* ![Blog Page Header Frontmatter section](./images/README/blog-page.png)
 
 * Blog Page Features: Quotes, Image, Heading2/3, Code, List
-![Blog Page Features: Quotes, Image, Heading2/3, Code, List](./images/README/blog-page-2.png)
+* ![Blog Page Features: Quotes, Image, Heading2/3, Code, List](./images/README/blog-page-2.png)
 
 * Blog Page Features: Quotes, Image, Heading2/3, Code, List
-![Blog Page Features: Quotes, Image, Heading2/3, Code, List](./images/README/blog-page-3.png)
+* ![Blog Page Features: Quotes, Image, Heading2/3, Code, List](./images/README/blog-page-3.png)
 
 
 ## Installation:
