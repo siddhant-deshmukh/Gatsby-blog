@@ -20,16 +20,16 @@ export default function BlogPageHeader({ frontmatter }: {
   }
   return (
     <>
-      <h1 className='blog-title text-secondary-d'>{frontmatter.name}</h1>
-      <div className='flex text-primary-4 justify-between items-center mt-1 mb-1 sm:mb-8 lg:mb-12 '>
-        <div className='tags-container flex flex-wrap text-sm  lg:text-base font-bold justify-end'>
+      <h1 className='blog-title text-primary-light-1'>{frontmatter.name}</h1>
+      <div className='flex text-secondary justify-between items-center mt-1 mb-1 sm:mb-8 lg:mb-12 '>
+        <div className='tags-container flex flex-wrap text-sm  lg:text-base font-bold justify-start'>
           {
             frontmatter.tags?.map((tag) => {
               return <span className='mr-3 my-1'>#{tag}</span>
             })
           }
         </div>
-        <time className='text-sm font-semibold'>{frontmatter.datePublished}</time>
+        <time className='text-sm font-semibold flex-shrink-0'>{frontmatter.datePublished}</time>
       </div>
     </>
   )

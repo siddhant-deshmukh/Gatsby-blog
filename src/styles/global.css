@@ -9,6 +9,15 @@
 
 }
 
+
+body {
+    /* background: linear-gradient(30deg, #171c28 70%,  #0a4554 99%); */
+    background: linear-gradient(145deg, #0a4554 1%, #171c28 12%, #171c28 80%,  #0a4554 99%);
+    /* background: #171c28; */
+    /* background: linear-gradient(130deg, #0a4554 1%, #171c28 10%); */
+
+}
+
 .layout-main > .absolute {
   scrollbar-gutter: stable right;
 }
@@ -36,7 +45,8 @@ figcaption {
 
 /* * This will overwrite the prism css even if deleted will be no problem */
 .gatsby-highlight pre[class*="language-"], .gatsby-highlight code[class*="language-"], .gatsby-highlight span[class*="token "] {
-  background: #00171f;
+  /* background: #093137ba; */
+  background: rgb(31 41 55);
   /* border-color: #dfdfdf; */
   /* box-shadow: #00171f; */
   box-shadow: none;
@@ -70,7 +80,7 @@ figcaption {
   }
   
   .the-blog p{
-    @apply text-primary-5 text-base lg:text-lg py-2.5 pl-0 sm:pl-2 inline-block
+    @apply text-primary-light-3 text-base lg:text-lg py-2.5 pl-0 sm:pl-2 inline-block
   }
   .the-blog ul > li{
     @apply text-base my-[0.5px] 
@@ -96,19 +106,19 @@ figcaption {
     @apply my-0.5 ml-8
   } */
   .the-blog blockquote{
-    @apply border-l-4 md:border-l-[10px] border-light-4 pl-2 sm:pl-4 py-2 ml-0 sm:ml-2 bg-light-2 mb-2 text-lg font-medium hover:border-l-light-5
+    @apply border-l-4 md:border-l-[10px] border-primary-3 pl-2 sm:pl-4 py-2 ml-0 sm:ml-2 bg-primary-4 mb-2 text-lg font-medium hover:border-l-primary-2
   }
   .the-blog figcaption{
-    @apply text-primary-3 text-xs sm:text-sm lg:text-base  my-1
+    @apply text-primary-light-3 text-xs sm:text-sm lg:text-base  my-1
   }
   .the-blog a {
-    @apply underline text-[#3B49DF] hover:text-blue-800
+    @apply underline text-secondary hover:text-secondary-1
   }
   /* .the-blog pre {
     @apply p-3 rounded-lg my-5 bg-[#f6f6f6] border border-[#dfdfdf] text-xs leading-5
   } */
   .the-blog span code[class="language-text"]{
-    @apply text-secondary-d bg-light-3 mx-2 
+    @apply text-primary-light-3 bg-primary-5 mx-2 
   }
 
   /* * Overwriting prims css */

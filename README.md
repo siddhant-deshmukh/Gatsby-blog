@@ -1,53 +1,70 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# Gatsby blog
 
-## 🚀 Quick start
+> Scan a folder having markdown files (.MD or .MDX) and convert them into static html pages.
 
-1.  **Create a Gatsby site.**
+> A SSG application made with Gatsby, tailwindcss, [gatsby-plugin-mdx]('https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/?=gatsby-plugin-mdx), [gatsby-remark-prismjs]('https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/?=prism') or [prismjs]('https://prismjs.com/)
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+## Images
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
+* Home Page Full
+![Home Page Full](./images/README/home-page-full.png)
+
+* Blog Page Header Frontmatter section
+![Blog Page Header Frontmatter section](./images/README/blog-page.png)
+
+* Blog Page Features: Quotes, Image, Heading2/3, Code, List
+![Blog Page Features: Quotes, Image, Heading2/3, Code, List](./images/README/blog-page-2.png)
+
+* Blog Page Features: Quotes, Image, Heading2/3, Code, List
+![Blog Page Features: Quotes, Image, Heading2/3, Code, List](./images/README/blog-page-3.png)
+
+
+## Installation:
+
+**You have to build the pages so locally** so please follow the steps.
+
+1. First Clone the application.
+2. Node.js above v18.15.0 should be installed.
+3. Install the gatsby-cli globally 
+    ```shell 
+      npm install --global yarn
+      npm install -g gatsby-cli
     ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
+4. Now check if installed correctly
     ```shell
-    cd my-gatsby-site/
-    npm run develop
+      gatsby --version
     ```
+5. Go in the root directory where the Git repo is clone and install all the dependencies
+   ```shell
+      yarn install 
+   ```
+6. Now to check the website in dev mode run
+   ```
+      gatsby develop --verbose
+   ```
+7. Wait till this process 
+   1. ![image](readme-imgs/image-complete.png)
+8. And check the website first if it is working correctly on http://localhost:8000/
+9. If takes too long or error occured close the terminal `Ctrl+C` and try again few times.
+   1. This is a heavy process so might take time depnding the number of files and images.
+10. If yes then build the application
+   ```
+      gatsby build
+   ```
+11. A new **`public`** folder will be created.
+   1.  The whole website is in public folder to still check it again 
+   2.  **open the `public` folder in vs code**
+   3.  And run Live Server ( the root folder should be `/public` )
+   4.  Now check it again and if everything seems fine the deploy it!
+   5.  This are all static files generated inside the /public folder you can directly deploy them
 
-3.  **Open the code and start customizing!**
 
-    Your site is now running at http://localhost:8000!
+## What is SSG? or how the application works
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+After running the build command gatsby scan the `src/pages` folder and follow the file structure as the url structure
 
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
-
-
-
-<!-- $$\phi_{n}(\kappa) = \frac{1}{4\pi^{2}\kappa^{2}}\int_{0}^{\infty}\frac{\sin(\kappa R)}{\kappa R}\frac{\partial}{\partial R}\left\lbrack R^{2}\frac{\partial D_{n}(R)}{\partial R} \right)dR$$ -->
+1. e.g if the files was `pages/meow/about.tsx` it will appear on url `{main-url}/meow/about.html`
+2. Also the special cases are `404.tsx` it will appear if someone goes on wrong url which has not been declared.
+3. And `pages/index.tsx` is the home page.
+4. And `src/pages/{mdx.frontmatter__slug}.tsx` will scan all the .mdx and .md files from **CMS**.
+5. CMS means content management system. Inside `gatsby-config.ts` checkout `gatsby-source-filesystem` inside `plugin`. This will add our `blogs/` folder and its content in the CMS and hence .md files inside the blogs/ folder will be converted into html pages.

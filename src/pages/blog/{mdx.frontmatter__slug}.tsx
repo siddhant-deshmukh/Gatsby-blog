@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import Layout from '../../components/Layout'
 import { GatsbyImage, ImageDataLike, getImage } from 'gatsby-plugin-image'
-import BlogPageHeader from '../components/BlogPageHeader'
-import BlogHead from '../components/BlogHead'
+import BlogPageHeader from '../../components/BlogPageHeader'
+import BlogHead from '../../components/BlogHead'
 
 
 
@@ -35,7 +35,7 @@ const BlogPost = ({ data, children }: {
           </div>
         }
 
-        <div className='the-blog flex flex-col max-w-5xl bg-white shadow-blue-900 shadow-lg w-full px-3 md:px-7 py-5 border-x border-b-2 border-t-0'>
+        <div className='the-blog flex flex-col max-w-5xl text-primary w-full px-3 md:px-7 py-5 shadow-sm s shadow-secondary-2'>
           <BlogPageHeader frontmatter={data?.mdx?.frontmatter}/>
           {children}
         </div>

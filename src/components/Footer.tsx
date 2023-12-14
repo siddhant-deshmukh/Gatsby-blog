@@ -3,13 +3,13 @@ import React from 'react'
 function Footer() {
   return (
     <footer
-      className="flex flex-col items-center  text-center text-white dark-gradient-bg">
+      className="flex flex-col items-center  text-center mt-20">
       <div className="container px-6 pt-6">
         <div className="mb-6 flex justify-center">
           <a
             href="#!"
             type="button"
-            className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+            className="m-1 h-9 w-9 rounded-full border-2 border-secondary-2 uppercase leading-normal text-secondary transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
             data-te-ripple-init
             data-te-ripple-color="light">
             <svg
@@ -25,7 +25,7 @@ function Footer() {
           <a
             href="#!"
             type="button"
-            className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+            className="m-1 h-9 w-9 rounded-full border-2 border-secondary-2 uppercase leading-normal text-secondary transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
             data-te-ripple-init
             data-te-ripple-color="light">
             <svg
@@ -41,7 +41,7 @@ function Footer() {
           <a
             href="#!"
             type="button"
-            className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+            className="m-1 h-9 w-9 rounded-full border-2 border-secondary-2 uppercase leading-normal text-secondary transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
             data-te-ripple-init
             data-te-ripple-color="light">
             <svg
@@ -59,7 +59,7 @@ function Footer() {
           <a
             href="#!"
             type="button"
-            className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+            className="m-1 h-9 w-9 rounded-full border-2 border-secondary-2 uppercase leading-normal text-secondary transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
             data-te-ripple-init
             data-te-ripple-color="light">
             <svg
@@ -73,9 +73,9 @@ function Footer() {
           </a>
 
           <a
-            href="#!"
+            href="https://www.linkedin.com/in/siddhant-sd/"
             type="button"
-            className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+            className="m-1 h-9 w-9 rounded-full border-2 border-secondary-2 uppercase leading-normal text-secondary transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
             data-te-ripple-init
             data-te-ripple-color="light">
             <svg
@@ -89,9 +89,9 @@ function Footer() {
           </a>
 
           <a
-            href="#!"
+            href="https://github.com/siddhant-deshmukh"
             type="button"
-            className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+            className="m-1 h-9 w-9 rounded-full border-2 border-secondary-2 uppercase leading-normal text-secondary transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
             data-te-ripple-init
             data-te-ripple-color="light">
             <svg
@@ -108,9 +108,7 @@ function Footer() {
 
       <div
         className="w-full p-4 text-center bg-opacity-20 ">
-        <a className="text-whitehite" href=""
-        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, aliquam.</a
-        >
+        Created and Designed By <a href="https://siddhant-deshmukh.github.io/" className='underline'>Siddhant Deshmukh</a>
       </div>
     </footer>
   )

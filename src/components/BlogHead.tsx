@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function BlogHead({ seo } : {
   seo : {
-    title?: string,
+    name?: string,
     description?: string,
     image?: string,
     keywords?: string,
@@ -16,7 +16,7 @@ export default function BlogHead({ seo } : {
       {/* <link rel="icon" href="favicon.png"></link> */}
 
       {
-        seo.title && <title>{seo.title}</title>
+        seo.name && <title>{seo.name}</title>
       }
       {
         seo.description && <meta name="description" content={seo.description} />

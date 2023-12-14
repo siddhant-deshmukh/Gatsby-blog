@@ -1,20 +1,77 @@
-import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
-import Layout from "../components/Layout"
-import { StaticImage } from "gatsby-plugin-image"
+import React from 'react'
+import { graphql } from 'gatsby'
+import { ImageDataLike, getImage } from 'gatsby-plugin-image'
 
-const IndexPage: React.FC<PageProps> = () => {
+import Layout from '../components/Layout'
+import { BlogCardSquare } from '../components/Blog'
+
+// the prop must be named data
+function BlogsPage({ data }: {
+  data?: {
+    allMdx?: {
+      nodes?: {
+        id: string,
+        frontmatter: {
+          name: string, description?: string, slug?: string, datePublished?: string, tags?: string[],
+          featuredImage?: {
+            childImageSharp?: {
+              gatsbyImageData: ImageDataLike | null
+            }
+          }
+        }
+      }[]
+    }
+  }
+}) {
   return (
-    <Layout pageTitle="Home Page">
-      <p>I'm making this by following the Gatsby Tutorial.</p>
-      <StaticImage
-        alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
-        src="../images/panda.jpeg"
-      />
+    <Layout pageTitle='Blogs'>
+      <div className='w-full py-20 px-2'>
+        <div className='mx-auto max-w-[1040px] text-white'>
+          {/* Title of the blogs page */}
+          <h1 className='text-5xl font-bold text-secondary'>Blogs</h1>
+          {/* For the blogs page Description */}
+          <p className='text-lg mt-3'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora officiis, sint nemo neque minima laudantium nam, ratione rem, aut ipsa tempore.
+          </p>
+        </div>
+      </div>
+      <div className='flex flex-col px-2 items-center w-full mx-auto'>
+        {/* <span>{JSON.stringify(data)}</span> */}
+        <ul className='grid grid-cols-1 lg:grid-cols-2 grid-flow-cols gap-x-7 gap-y-2'>
+          {
+            data?.allMdx?.nodes?.map(({ id, frontmatter: blog }) => {
+              let featuredImg = getImage(blog.featuredImage?.childImageSharp?.gatsbyImageData as ImageDataLike | null)
+              return <BlogCardSquare key={id} blog={blog} featuredImg={featuredImg} />
+            })
+          }
+        </ul>
+      </div>
     </Layout>
   )
 }
 
-export default IndexPage
+// name can be anything
+export const GetBlogsQuery = graphql`query GetBlogsInfoList {
+  allMdx(sort: {frontmatter: {datePublished: ASC}}) {
+    nodes {
+      id
+      frontmatter {
+        name
+        slug
+        description
+  			author
+        datePublished
+        tags
+        featuredImage {
+          childImageSharp {
+            # gatsbyImageData(width: 650, height: 910)
+            gatsbyImageData(width: 700, height: 300)
+          }
+        }
+      }
+    }
+  }
+}`
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head = () => <title>Blogs Page</title>
+export default BlogsPage

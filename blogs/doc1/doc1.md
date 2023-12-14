@@ -2,9 +2,9 @@
 name: "How to write a docx which will be later used in .MD"
 description: "This is a way in which we can optimise the code bla bla bla Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid sequi necessitatibus atque omnis neque, dolorem distinctio possimus quis reiciendis repellendus."
 author: "Siddhant Deshmukh"
-datePublished: "Nov 34, 2018"
+datePublished: "Nov 29, 2018"
 slug: "how-to-write-doc"
-featuredImage: "../imgs/ele-01.jpg"
+featuredImage: "./thumbnail-rect.webp"
 tags: ["matlab", "consectetur", "adipisicing", "elit.", "Dolores", "doloremque"]
 ---
 
@@ -81,8 +81,8 @@ aliquet. Nunc quis nisl quis nisl sagittis aliquet. Sed id nisl quis
 nisl sagittis aliquet. Nunc quis nisl quis nisl sagittis aliquet.
 
 
-![image of an panda, Very cute panda](./ele-07.jpeg)
-![image of an panda, Very cute panda](../imgs/ele-08.jpg)
+![image of an panda, Very cute panda](./plotty-chart-rect-sq.png)
+![image of an panda, Very cute panda](./image1.jpeg)
 
 
 ## 1.3 Now some lists:
@@ -150,7 +150,7 @@ ylabel('Power')
 
 ### First Paragraph 
 
-![image of an panda, Very cute panda](./image1.jpeg)
+![image of an panda, Very cute panda](./curves.png)
 
 Sed id nisl quis nisl [sagittis aliquet. Nunc quis nisl quis nisl sagittis aliquet. Sed id]('www/meow.com') nisl quis nisl sagittis aliquet. Nunc quis nisl
 quis nisl sagittis aliquet. Sed id nisl quis nisl sagittis aliquet. Nunc
